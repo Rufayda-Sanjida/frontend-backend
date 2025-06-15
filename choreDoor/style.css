@@ -1,0 +1,106 @@
+body {
+  margin: 0px;
+}
+
+.header {
+  background-color: lightsalmon;
+  text-align: center;
+}
+
+.header img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: -20px;
+}
+
+
+
+.title {
+  text-align: center;
+  margin-top: 42px;
+  text-align: center;
+  margin-bottom: 21px;
+}
+
+.title img {
+   width: 100px;
+    height: 100px;
+}
+
+.instructions-row {
+  text-align: center;
+  margin: 0 auto;
+  width: 400px;
+  padding-bottom: 30px;
+}
+
+
+.instructions-number {
+  padding-right: 25px;
+  font-family: 'Work Sans';
+  font-size: 36px;
+  color: lightcoral;
+}
+
+.instructions-text {
+  padding: 10px;
+  font-family: 'Work Sans';
+  font-size: 14px;
+  color: lightsalmon;
+}
+
+.door-row {
+  display: flex;
+  justify-content: center; /* centers the doors horizontally */
+  gap: 100px;                /* spacing between doors (optional) */
+  margin-bottom: 50px;
+}
+
+.start-row {
+  margin: auto;
+  width: 170px;
+  height: 90px;
+  background-color: lightsalmon;
+  padding-top: 18px;
+  font-family: 'Work Sans';
+  font-size: 18px;
+  text-align: center;
+  color: #010165;
+  margin-bottom: 9px;
+  cursor: pointer;
+}
+
+.start-row img{
+    height: 34px;
+    width: 34px;
+}
+
+  /**
+.door-frame {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.start-row {
+  margin: auto;
+  width: 120px;
+  height: 43px;
+  background-color: #eb6536;
+  padding-top: 18px;
+  font-family: 'Work Sans';
+  font-size: 18px;
+  text-align: center;
+  color: #010165;
+  margin-bottom: 9px;
+  cursor: pointer;
+}
+**/
+
+
+.door-frame {
+  width: 120px;       /* or whatever fixed width you want */
+  height: 250px;      /* match all image heights */
+  object-fit: cover;  /* make the image scale/crop to fit the box */
+  border: none;
+  padding: 0;
+}

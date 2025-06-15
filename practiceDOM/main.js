@@ -9,7 +9,7 @@ document.querySelector('.heading').style.fontFamily = 'Roboto'; //query selector
 let first = document.children[0];
 console.log(first);
 
-first.innerHTML = 'BROWN BEARS ARE AWESOME!'; //changes everything on the page BUT is HEAD ALSO CHANGED? REMOVED? WHAT IDK
+//first.innerHTML = 'BROWN BEARS ARE AWESOME!'; //changes everything on the page BUT is HEAD ALSO CHANGED? REMOVED? WHAT IDK
 
 // !!!!!!!!!!!!! first.parentNode.style.backgroundColor = 'beige'; //traversing!!! mistake here!!!!!!!!!!!!!
 
@@ -31,8 +31,11 @@ newAttraction.innerHTML = 'Rent a Vespa'
 // .removeChild(element to be removed)  and document.getElementById('sign').hidden = true;
 
 let elementToRemove = document.querySelector(".vespa")
-// why do i keep having to specify document?
 // document.getElementByID("italy-attractions").removeChild(elementToRemove) //failed to open
 
 
-function clickFuction()
+//let element = document.querySelector('button');
+
+function functionName(){
+    console.log("Function is working");
+}
