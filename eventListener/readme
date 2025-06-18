@@ -1,0 +1,7 @@
+actions trigger events 
+actions = user interaction?
+events = change/manipulation in DOM
+
+event handler functions = executer for the event when action
+event handlers = a dog trained to eat when it hears a bell (an action occurs)
+

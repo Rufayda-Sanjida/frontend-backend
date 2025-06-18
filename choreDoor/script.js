@@ -62,9 +62,6 @@ function checks(door){
     
 } 
 
-
-
-
 // // // is the door i clicked on, open or closed?
 // // // is the door i clicked, the chore door?
 // // // game over function, simply when the game is over - display whether the user lost or won
