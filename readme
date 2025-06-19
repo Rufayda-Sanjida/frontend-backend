@@ -1,0 +1,33 @@
+client in web development: browser or anything that requests information (mobile app, smart entity)
+backend sends the resources to the client to put together to show the user
+
+The Web Server: holds information and gives it to client over the internet when requested 
+information: source code that can be compiled and run to render a website the use can see
+
+Backend listens for requests from frontend 
+
+protocol: so basically a protocol is the way two entities communicate and in terms of web development, its how communication between web servers and clients happens in structured way
+
+
+dynmanic websites: (like dine in experience) you get information as you request more and more
+static websites: (like take out) you get all the information at once no more resquesting information
+
+Backend:
+
+- you store data in database
+- Web API is a consistent ways of interacting with data, a back-end will often include a web API that listens for requests and gives; predefined ways of, or rules for, interacting with a web application’s data,
+- anything that listens and gives information in a certain way (functions) is an api (INTERFACE)
+- when you're using a Web API, you're typically not asking to see a page — you're asking the server to:
+
+    - Give you data (e.g. all blog posts)
+
+    - Save new data (e.g. create a new blog post)
+
+    - Change existing data (e.g. edit a post)
+
+    - Remove data (e.g. delete a post)
+
+- authorixation and authentication 
+
+frameworks: makes the process of building something easier (provides specific tools to get tasks done)
+- flask is a backend framework that makes doing alot of the things we need to do easier
