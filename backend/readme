@@ -1,0 +1,51 @@
+# pip freeze > requirements.txt 
+# pip install -r requirements.txt 
+^ this is for installing all of the stuff 
+
+
+client in web development: browser or anything that requests information (mobile app, smart entity)
+backend sends the resources to the client to put together to show the user
+
+The Web Server: holds information and gives it to client over the internet when requested 
+information: source code that can be compiled and run to render a website the use can see
+
+Backend listens for requests from frontend 
+
+protocol: so basically a protocol is the way two entities communicate and in terms of web development, its how communication between web servers and clients happens in structured way
+
+
+dynmanic websites: (like dine in experience) you get information as you request more and more
+static websites: (like take out) you get all the information at once no more resquesting information
+
+Backend:
+
+- you store data in database
+- Web API is a consistent ways of interacting with data, a back-end will often include a web API that listens for requests and gives; predefined ways of, or rules for, interacting with a web application’s data,
+- anything that listens and gives information in a certain way (functions) is an api (INTERFACE)
+- when you're using a Web API, you're typically not asking to see a page — you're asking the server to:
+
+    - Give you data (e.g. all blog posts)
+
+    - Save new data (e.g. create a new blog post)
+
+    - Change existing data (e.g. edit a post)
+
+    - Remove data (e.g. delete a post)
+
+- authorixation and authentication 
+
+frameworks: makes the process of building something easier (provides specific tools to get tasks done)
+- flask is a backend framework that makes doing alot of the things we need to do easier
+
+
+HTTP is a way of communication between browsers and servers via the internet.HTTP is a protocol (a set of rules) that tells browsers and servers how to format and send requests/responses.
+
+User types in website it wants to access. The browser/OS asks the DNS system (like your ISP’s DNS or Google DNS) match the URL to a IP address. Once an IP address is found, Browser starts a TCP connection (TCP ensures that data travels reliably and in order) and sends over that http request to the server. The server sends information that was requested as it is always listening for requests via the same TCP connection. Older TCP connections are one time use while new ones are more efficient and connection is kept on for longer so multiple requests can be made. 
+
+HTTPS is the protocol used if information sent and request is sensitive which is more secure and safe. 
+
+servers respond with confirmation or deny!
+    - HTTP/1.1 200 OK
+      Content-Type: text/html
+    
+    - HTTP/1.1 404 NOT FOUND
