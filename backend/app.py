@@ -1,57 +1,50 @@
-#flask = microframework because it has minimal  minimal built-in components and requirements but can be used to built a full fledge app
+from flask import Flask 
+from helper import pets
 
-#we are importing the module (flask) that includes all the classes and functions 
-#from that module we are importing a class called FLASK = needed to create the main application object
-#whats the difference between library and module?
-from flask import Flask
+app = Flask("__name__")
 
-#need an instance of the Flask class
-#when we make a flask app, we need to put in the name of the application
-# __name__ = the value depends on how we execute the script [if directly than it will be __main__] if we import it to another python program as module, then it will be replaced with filename
-myApp = Flask(__name__)
+@app.route("/")
+def index():
+    return '''<h1>Adopt a Pet!</h1> 
+    <p>Browse through the links below to find your new furry friend: </p>
+    <ul>
 
-print(__name__) #__main__
+    <li>    <a href="/animals/dogs">Dogs</a> </li>
+    <li>    <a href="/animals/cats">Cats</a> </li>
+    <li>    <a href="/animals/rabbits">Rabbits</a> </li>
 
-#routing! 
-# handling requests to different URLs, we create different endpoints to take care of the different URLs
-
-# view function: takes care of request to a URL(s): processing the request and generating a response
-# you need to bind URLs to view functions with a route decorator: takes the URL path as parameter, or the part of the URL that follows the domain name. 
-# URL = starts with ("/")
-# multiple URLS can be bind to the same end points 
-
-@myApp.route("/")
-@myApp.route("/home")
-def home():
-    return 'Hello, World!'
-
-#end points can be HTML pages too! (multi line = ''' insert here ''')
-@myApp.route("/home1")
-def home1():
-    return '''<h1>Hello, World!</h1> 
-    <p>hi </p> '''
+    </ul>
+    '''
 
 
-#Dynamic routes: routes can include variables and it will be processed in the view function 
-@myApp.route('/<name>/<int:age>')
-def name(name, age):
-    return(f"hello {name} and I am {age} years old")
-
-
-@myApp.route("/returnHome")
-def returnHome():
-    return '<a href="/">Return back to home page</a>'
-
-
-#whats a URL slug??
-@myApp.route("/article/<string:article_name>")
-def article(article_name):
-    myList = list(article_name)
-    newString = ""
-    for x in myList:
-        if x == "-":
-            newString = newString + " "
-        else:
-            newString = newString + x
+@app.route('/animals/<string:pet_type>')
+def animals(pet_type):
+    html = f'<h1>List of {pet_type}</h1>'
+    html = html + "<ul>"
+    numberOfPets = len(pets[pet_type])
+    for eachPet in range(0, numberOfPets):
+        print(pets[pet_type][eachPet]["name"])
+        name = pets[pet_type][eachPet]["name"]
+        htmlName = f'<li> <a href="/animals/{pet_type}/{eachPet}">{name}</a></li>'
+        html = html + htmlName
     
-    return f''' <p>{newString}</p> '''
+    html = html + "</ul>"
+    return html
+
+@app.route('/animals/<string:pet_type>/<int:pet_id>')
+def pet(pet_type, pet_id):
+    #index position = pet_id
+    pet = pets[pet_type][pet_id]
+    
+    petName = pets[pet_type][pet_id]["name"]
+    picUrl = pets[pet_type][pet_id]["url"]
+    petDescription = pets[pet_type][pet_id]["description"]
+    petBreed = pets[pet_type][pet_id]["breed"]
+    petAge = pets[pet_type][pet_id]["age"]
+    
+    html = f"<h1>{petName}</h1>"
+    html = html + f'<img src="{picUrl}">'
+    html = html + f'<p>{petDescription}</p>'
+    html = html + f'<ul> <li>Age: {petAge}</li> <li>Breed: {petBreed}</li>  </ul>'
+    return html
+    print(pet)
