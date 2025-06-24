@@ -5,8 +5,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-  return render_template("index.html")
+  return render_template("index.html", recipes=recipes)
 
 @app.route("/recipe/<int:id>")
 def recipe(id):
   return render_template("recipe.html", template_recipe=recipes[id], template_ingredients=ingredients[id], template_instructions=instructions[id])
+

@@ -1,0 +1,10 @@
+filters = used by the template to manipulate template variables based on what the filter can do
+
+example filter = "title"
+this filter will take any string and capatalize the first letter of each word
+
+{{ template_variable | title }}
+
+
+filters can be used inside of filters ex.
+<p>{{ template_description | default("A " + template_recipe | title + " recipe")}}</p>
