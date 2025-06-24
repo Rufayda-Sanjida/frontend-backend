@@ -1,0 +1,3 @@
+-  Instead of returning strings for rendering html files, you can send templates 
+which are html files
+- however, the html file needs to be in a folder called templates
