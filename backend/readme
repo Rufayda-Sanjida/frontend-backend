@@ -5,3 +5,7 @@
     this makes the template_title capitalize the first letter of the word
      <p> A {{ template_description | default(template_recipe) }} recipe</p>
       once its inside the {{ }} then any other template variable is fair game!! like above
+
+- inheretance: the file that all the other files inherit from has the content that is inhereited. 
+the content based is put inside {% block content %}
+{% endblock %}
