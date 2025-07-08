@@ -1,0 +1,7 @@
+- templating is when you can reuse the same html file (structure of a page) for a bunch of pages
+- you can sub in variables 
+- you can manipulate variables in one shot way in templates = filtering 
+    example: template_title | title 
+    this makes the template_title capitalize the first letter of the word
+     <p> A {{ template_description | default(template_recipe) }} recipe</p>
+      once its inside the {{ }} then any other template variable is fair game!! like above
