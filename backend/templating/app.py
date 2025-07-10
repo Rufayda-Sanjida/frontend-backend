@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from helper import recipes, descriptions, ingredients, instructions
+from templating.helper import recipes, descriptions, ingredients, instructions
 
 app = Flask(__name__)
 
